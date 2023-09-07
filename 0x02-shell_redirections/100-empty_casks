@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f - type d -empty -printf "%f\n"
+find . -type d -empty -printf "%f\n" 2>/dev/null ; find . -type f -empty -printf "%f\n"
