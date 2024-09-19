@@ -6,8 +6,8 @@ endpoint and displays the employee name, the number of tasks completed
 out the total tasks to be completed
 """
 
-import sys
 import requests
+import sys
 
 
 def employee_data(employee_id):
