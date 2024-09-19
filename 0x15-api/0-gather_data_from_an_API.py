@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script retrives employee data and todo tasks from an external API 
+This script retrives employee data and todo tasks from an external API
 endpoint and displays the employee name, the number of tasks completed
 out the total tasks to be completed
 """
@@ -10,7 +10,6 @@ import sys
 url = "https://jsonplaceholder.typicode.com/"
 
 
-"""introducing function with employee ID & todo variables"""
 def employee_data(employee_id):
     user_info = requests.get(url + "users/{}".format(employee_id)).json()
     todo_list = requests.get(url + "todos", params={"user_id": employee_id}).json()
