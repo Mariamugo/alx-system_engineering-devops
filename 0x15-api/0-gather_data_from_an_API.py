@@ -4,13 +4,12 @@ This script retrives employee data and todo tasks from an external API
 endpoint and displays the employee name, the number of tasks completed
 out the total tasks to be completed
 """
+
 import requests
 import sys
 
-url = "https://jsonplaceholder.typicode.com/"
-
-
 def employee_data(employee_id):
+    url = "https://jsonplaceholder.typicode.com/"
     user_info = requests.get(url + "users/{}".format(employee_id)).json()
     todo = requests.get(url + "todos", params={"user_id": employee_id}).json()
 
@@ -35,6 +34,7 @@ if __name__ == "__main__":
     employee_id = int(sys.argv[1])
     employee_name, comp_count, total_todo, comp = employee_data(employee_id)
 
-    print("Employee {} is done with tasks {}/{}:".format(employee_name, comp_count, total_todo))
+    print("Employee {} is done with tasks {}/{}:".format
+            (employee_name, comp_count, total_todo))
     for task in comp:
-        print("\t", task)
+        print("\t{}".format(task))
