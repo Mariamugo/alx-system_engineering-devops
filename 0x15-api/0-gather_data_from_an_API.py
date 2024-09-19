@@ -4,6 +4,7 @@ This script retrives employee data and todo tasks from an external API
 endpoint and displays the employee name, the number of tasks completed
 out the total tasks to be completed
 """
+
 import sys
 import requests
 
