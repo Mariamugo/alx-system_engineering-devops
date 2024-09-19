@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""using the requests module"""
+"""This script retrives employee data and todo tasks from an external API 
+   endpoint and displays the employee name, the number of tasks completed
+   out the total tasks to be completed
+   """
 import requests
 """access command line arguments"""
 import sys
