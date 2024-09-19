@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 This script retrives employee data and todo tasks from an external API
 endpoint and displays the employee name, the number of tasks completed
@@ -33,10 +34,8 @@ if __name__ == "__main__":
 
     """script to accept integer param"""
     employee_id = int(sys.argv[1])
-    employee_name, comp_count, total_todo,
-        completed = employee_data(employee_id)
+    employee_name, comp_count, total_todo, completed = employee_data(employee_id)
 
-    print("Employee {} is done with tasks({}/{}):".format
-            (employee_name, comp_count, total_todo))
+    print("Employee {} is done with tasks({}/{}):".format(employee_name, comp_count, total_todo))
     for task in completed:
         print("\t {}".format(task))
