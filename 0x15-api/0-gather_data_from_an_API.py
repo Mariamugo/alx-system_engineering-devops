@@ -37,6 +37,6 @@ if __name__ == "__main__":
     employee_name, comp_count, total_todo, completed = employee_data(employee_id)
 
     print("Employee {} is done with tasks({}/{}):"
-         .format(employee_name, comp_count, total_todo))
+          .format(employee_name, comp_count, total_todo))
     for task in completed:
         print("\t {}".format(task))
