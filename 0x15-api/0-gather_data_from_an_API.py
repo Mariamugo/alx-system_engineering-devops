@@ -34,7 +34,8 @@ if __name__ == "__main__":
 
     """script to accept integer param"""
     employee_id = int(sys.argv[1])
-    employee_name, comp_count, total_todo, completed = employee_data(employee_id)
+    employee_name, comp_count, total_todo, 
+          completed = employee_data(employee_id)
 
     print("Employee {} is done with tasks({}/{}):"
           .format(employee_name, comp_count, total_todo))
