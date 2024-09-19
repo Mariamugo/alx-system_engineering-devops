@@ -40,4 +40,3 @@ if __name__ == "__main__":
             (employee_name, comp_count, total_todo))
     for task in completed:
         print("\t {}".format(task))
-
