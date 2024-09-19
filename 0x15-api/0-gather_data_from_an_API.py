@@ -7,7 +7,7 @@ out the total tasks to be completed
 import requests
 import sys
 
-url = https://jsonplaceholder.typicode.com/
+url = "https://jsonplaceholder.typicode.com/"
 
 
 """introducing function with employee ID & todo variables"""
