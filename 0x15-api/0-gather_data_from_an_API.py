@@ -12,14 +12,14 @@ import requests
 def employee_data(employee_id):
     url = "https://jsonplaceholder.typicode.com/"
     user_info = requests.get(url + "users/{}".format(employee_id)).json()
-    todo = requests.get(url + "todos", params={"user_id": employee_id}).json()
+    todo = requests.get(url + "todos", params = {"userId": employee_id}).json()
 
     """variables to lists completed and total tasks"""
-    comp = [task.get("title") for task in todo if task.get("comp")]
+    completed = [t.get("title") for t in todo if t.get("completed") is True]
     total_todo = len(todo)
-    comp_count = len(comp)
+    comp_count = len(completed)
 
-    return user_info.get("name"), comp_count, total_todo, comp
+    return user_info.get("name"), comp_count, total_todo, completed
 
 
 """check whether script is imported or run directly"""
@@ -33,9 +33,10 @@ if __name__ == "__main__":
 
     """script to accept integer param"""
     employee_id = int(sys.argv[1])
-    employee_name, comp_count, total_todo, comp = employee_data(employee_id)
+    employee_name, comp_count, total_todo, completed = employee_data(employee_id)
 
     print("Employee {} is done with tasks {}/{}:".format
         (employee_name, comp_count, total_todo))
-    for task in comp:
+    for task in completed:
         print("\t{}".format(task))
+
